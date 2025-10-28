@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jithin Sebastian - Software Architect</title>
+    <title>Jithin Sebastian - Head of Engineering</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
@@ -194,6 +194,22 @@
         width: 100%;
       }
 
+      .primary-role {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(33, 147, 176, 0.5);
+        margin-bottom: 0.5rem;
+      }
+
+      .secondary-roles {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        opacity: 0.9;
+      }
+
       @keyframes float {
         0% {
           transform: translateY(0px);
@@ -235,6 +251,29 @@
         transition: all 0.4s ease;
         backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .primary-card {
+        background: rgba(33, 147, 176, 0.1);
+        border: 2px solid rgba(33, 147, 176, 0.3);
+        box-shadow: 0 8px 30px rgba(33, 147, 176, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .primary-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+      }
+
+      .primary-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(33, 147, 176, 0.3);
       }
 
       .experience-card img {
@@ -307,6 +346,14 @@
           padding: 0 10px;
         }
 
+        .primary-role {
+          font-size: 1.5rem;
+        }
+
+        .secondary-roles {
+          font-size: 0.9rem;
+        }
+
         .section {
           padding: 3rem 0;
         }
@@ -332,6 +379,14 @@
         .roles p {
           font-size: 0.9rem;
           line-height: 1.4;
+        }
+
+        .primary-role {
+          font-size: 1.3rem;
+        }
+
+        .secondary-roles {
+          font-size: 0.8rem;
         }
 
         .profile-img {
@@ -385,9 +440,9 @@
           />
           <h1 class="name floating">Jithin Sebastian</h1>
           <div class="roles" data-aos="fade-up">
-            <p>
-              Information Security Officer | Software Architect | R&D Division
-              Lead at Mozilor
+            <p class="primary-role">Head of Engineering</p>
+            <p class="secondary-roles">
+              Information Security Officer | R&D Division Lead
             </p>
           </div>
           <p data-aos="fade-up" data-aos-delay="200">
@@ -405,7 +460,18 @@
       <section class="section" data-aos="fade-up">
         <h2 class="section-title">Professional Experience</h2>
         <div class="experience-grid">
-          <div class="experience-card" data-aos="fade-right">
+          <div class="experience-card primary-card" data-aos="fade-right">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png"
+              alt="Engineering Icon"
+            />
+            <h3>Head of Engineering</h3>
+            <p>
+              Leading engineering teams and driving technical strategy across
+              multiple product lines and platforms.
+            </p>
+          </div>
+          <div class="experience-card" data-aos="fade-up">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png"
               alt="Security Icon"
@@ -414,17 +480,6 @@
             <p>
               Leading security initiatives and ensuring compliance across all
               platforms at CookieYes.
-            </p>
-          </div>
-          <div class="experience-card" data-aos="fade-up">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png"
-              alt="Architecture Icon"
-            />
-            <h3>Software Architect</h3>
-            <p>
-              Designing robust, scalable systems that power leading CMP
-              platforms.
             </p>
           </div>
           <div class="experience-card" data-aos="fade-left">
