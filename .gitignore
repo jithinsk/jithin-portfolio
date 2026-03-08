@@ -1,0 +1,16 @@
+# Private keys
+id_rsa
+id_rsa.pub
+*.pem
+*.key
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+package-lock.json

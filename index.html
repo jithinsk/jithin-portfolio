@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jithin Sebastian - Head of Engineering</title>
+    <title>Jithin Sebastian - Head of Engineering at Mozilor</title>
+    <meta name="description" content="Jithin Sebastian — Head of Engineering at Mozilor, Information Security Officer, and R&D Division Lead. 9 years scaling CookieYes to 1M+ users and 3B+ daily requests." />
+    <meta name="keywords" content="Jithin Sebastian, Head of Engineering, Mozilor, CookieYes, Software Engineering, Information Security, R&D, Backend, Cloud Architecture, AI, Full Stack" />
+    <meta name="author" content="Jithin Sebastian" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jithins.dev/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jithins.dev/" />
+    <meta property="og:title" content="Jithin Sebastian - Head of Engineering at Mozilor" />
+    <meta property="og:description" content="9 years of engineering excellence. Scaled CookieYes to 1M+ users and built systems processing 3B+ daily requests." />
+    <meta property="og:image" content="https://jithins.dev/profile.jpeg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jithin Sebastian - Head of Engineering at Mozilor" />
+    <meta name="twitter:description" content="9 years of engineering excellence. Scaled CookieYes to 1M+ users and built systems processing 3B+ daily requests." />
+    <meta name="twitter:image" content="https://jithins.dev/profile.jpeg" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
@@ -91,6 +109,15 @@
         );
       }
 
+      .skills-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        font-size: 1.2rem;
+        color: #e0e0e0;
+        line-height: 1.8;
+      }
+      
       .skills {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -144,26 +171,33 @@
       }
 
       .personal {
-        background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
-          center/cover no-repeat;
         text-align: center;
         position: relative;
         padding: 8rem 0;
       }
 
-      .personal::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-      }
 
       .personal-content {
         position: relative;
         z-index: 2;
+      }
+      
+      .personal .section-title::after {
+        width: 100%;
+      }
+      
+      .personal-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      
+      .personal .profile-img {
+        margin-bottom: 0;
+        width: 120px;
+        height: 120px;
       }
 
       .roles {
@@ -322,6 +356,29 @@
         object-fit: contain;
         margin-bottom: 1rem;
       }
+      
+      .experience-highlights {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0 0;
+        text-align: left;
+      }
+      
+      .experience-highlights li {
+        position: relative;
+        padding-left: 1.8rem;
+        margin-bottom: 0.8rem;
+        color: #e0e0e0;
+      }
+      
+      .experience-highlights li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #2193b0;
+        font-weight: bold;
+      }
 
       .scroll-down {
         position: absolute;
@@ -366,6 +423,94 @@
         height: 3px;
         background: #2193b0;
       }
+      
+      /* Impact Section Styles */
+      .impact-section {
+        background: rgba(33, 147, 176, 0.05);
+        padding: 5rem 0;
+        margin-top: 0;
+        position: relative;
+        border-top: 1px solid rgba(33, 147, 176, 0.2);
+        border-bottom: 1px solid rgba(33, 147, 176, 0.2);
+      }
+      
+      .impact-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+      }
+      
+      .impact-intro p {
+        font-size: 1.2rem;
+        color: #e0e0e0;
+        line-height: 1.8;
+      }
+      
+      .metrics-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      
+      .metric-card {
+        background: rgba(15, 15, 15, 0.6);
+        padding: 2.5rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(33, 147, 176, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .metric-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+      }
+      
+      .metric-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(33, 147, 176, 0.3);
+      }
+      
+      .metric-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+      }
+      
+      .metric-label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #f5f5f5;
+      }
+      
+      .metric-description {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        line-height: 1.6;
+      }
+      
+      .metric-icon {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #2193b0;
+        opacity: 0.8;
+      }
 
       /* Mobile Responsive Styles */
       @media (max-width: 768px) {
@@ -408,6 +553,26 @@
           padding: 3rem 0;
         }
 
+        .impact-section {
+          padding: 3rem 0;
+        }
+
+        .metrics-container {
+          grid-template-columns: 1fr;
+        }
+
+        .metric-number {
+          font-size: 3rem;
+        }
+
+        .metric-label {
+          font-size: 1.3rem;
+        }
+
+        .metric-description {
+          font-size: 1rem;
+        }
+
         .experience-grid {
           grid-template-columns: 1fr;
         }
@@ -418,6 +583,13 @@
 
         .personal {
           padding: 4rem 0;
+        }
+        
+        .personal-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 1rem;
         }
       }
 
@@ -460,43 +632,43 @@
       }
     </style>
     <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://metrics.jithins.dev/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KP75RPLW");
-    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KLW5LBXZ');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jithin Sebastian",
+      "url": "https://jithins.dev",
+      "image": "https://jithins.dev/profile.jpeg",
+      "jobTitle": "Head of Engineering",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Mozilor"
+      },
+      "description": "Head of Engineering at Mozilor with 9 years of experience scaling systems to serve over 1 million users globally.",
+      "knowsAbout": ["Software Engineering", "Information Security", "R&D", "Backend Systems", "Cloud Architecture", "AI/ML", "Big Data"]
+    }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://metrics.jithins.dev/ns.html?id=GTM-KP75RPLW"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW5LBXZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="hero">
       <div class="hero-content">
         <div class="container">
-          <img
-            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100%' height='100%' fill='%232193b0'/><text x='50%' y='50%' font-family='Arial' font-size='40' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'>JS</text></svg>"
-            alt="Jithin Sebastian"
-            class="profile-img floating"
-          />
           <h1 class="name floating">Jithin Sebastian</h1>
           <div class="roles" data-aos="fade-up">
             <div class="primary-role-container">
-              <h2 class="primary-role">Head of Engineering</h2>
+              <h2 class="primary-role">Head of Engineering at Mozilor</h2>
               <div class="role-divider"></div>
             </div>
             <div class="secondary-roles-container">
@@ -506,7 +678,7 @@
             </div>
           </div>
           <p data-aos="fade-up" data-aos-delay="200">
-            9 Years of Engineering Excellence
+            9 Years of Engineering Excellence & Value Delivery
           </p>
         </div>
       </div>
@@ -515,6 +687,38 @@
         <div>↓</div>
       </div>
     </div>
+
+    <section class="impact-section">
+      <div class="container">
+        <div class="impact-intro" data-aos="fade-up">
+          <h2 class="section-title">Impact & Achievements</h2>
+          <p>Driving tangible business results through technical leadership and engineering excellence</p>
+        </div>
+        
+        <div class="metrics-container">
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="metric-icon">👥</div>
+            <div class="metric-number">1M+</div>
+            <div class="metric-label">Users</div>
+            <p class="metric-description">Scaled CookieYes to serve over one million business users worldwide</p>
+          </div>
+          
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="metric-icon">🔄</div>
+            <div class="metric-number">3B+</div>
+            <div class="metric-label">Daily Requests</div>
+            <p class="metric-description">Built high-performance pipelines processing over 3 billion requests daily</p>
+          </div>
+          
+          <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="metric-icon">🌐</div>
+            <div class="metric-number">Global</div>
+            <div class="metric-label">Scale</div>
+            <p class="metric-description">Engineered planet-scale scanning services for CookieYes</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="container">
       <section class="section" data-aos="fade-up">
@@ -525,11 +729,16 @@
               src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png"
               alt="Engineering Icon"
             />
-            <h3>Head of Engineering</h3>
+            <h3>Head of Engineering at Mozilor</h3>
             <p>
-              Leading engineering teams and driving technical strategy across
-              multiple product lines and platforms.
+              Leading engineering teams to build scalable products that serve millions of users globally. 
+              Architected systems processing billions of daily requests.
             </p>
+            <ul class="experience-highlights">
+              <li>Scaled CookieYes from 100K to 1M+ active users</li>
+              <li>Built high-throughput data processing pipelines</li>
+              <li>Architected planet-scale scanning infrastructure</li>
+            </ul>
           </div>
           <div class="experience-card" data-aos="fade-up">
             <img
@@ -539,8 +748,13 @@
             <h3>Information Security Officer</h3>
             <p>
               Leading security initiatives and ensuring compliance across all
-              platforms at CookieYes.
+              platforms at CookieYes, with focus on data protection and privacy.
             </p>
+            <ul class="experience-highlights">
+              <li>Implemented security-first development practices</li>
+              <li>Achieved multiple compliance certifications</li>
+              <li>Reduced security incident response time by 70%</li>
+            </ul>
           </div>
           <div class="experience-card" data-aos="fade-left">
             <img
@@ -549,62 +763,77 @@
             />
             <h3>R&D Division Lead</h3>
             <p>
-              Pushing boundaries and exploring innovative solutions in web-based
-              technologies at Mozilor.
+              Driving innovation through research and development of cutting-edge 
+              technologies that power next-generation web solutions.
             </p>
+            <ul class="experience-highlights">
+              <li>Developed proprietary scanning technology</li>
+              <li>Pioneered AI integration in consent management</li>
+              <li>Created performance optimization frameworks</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2 class="section-title" data-aos="fade-right">Technical Expertise</h2>
+        <p class="skills-intro">
+          Leveraging cutting-edge technologies to solve complex business problems at scale
+        </p>
         <div class="skills">
           <div class="skill-card" data-aos="zoom-in">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png"
               alt="Backend Icon"
             />
-            <h3>Backend Development</h3>
-            <p>Node.js, Go, Python</p>
+            <h3>Scalable Backend Systems</h3>
+            <p>Node.js, Go, Python, Microservices Architecture</p>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
             <img
               src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png"
               alt="Frontend Icon"
             />
-            <h3>Frontend Development</h3>
-            <p>React, Vue, Angular</p>
+            <h3>High-Performance Frontend</h3>
+            <p>React, Vue, Angular, Web Performance Optimization</p>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
             <img
               src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png"
               alt="Data Icon"
             />
-            <h3>Data Engineering</h3>
-            <p>Data Processing & Analytics</p>
+            <h3>Big Data Engineering</h3>
+            <p>High-throughput Processing, ETL Pipelines, Analytics</p>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png"
               alt="AI Icon"
             />
-            <h3>AI & ML</h3>
-            <p>GenAI Integration & Machine Learning</p>
+            <h3>AI & ML Solutions</h3>
+            <p>ML Pipelines, GenAI Integration, Predictive Analytics</p>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png"
               alt="Security Icon"
             />
-            <h3>Information Security</h3>
-            <p>Security Architecture & Best Practices</p>
+            <h3>Enterprise Security</h3>
+            <p>SecDevOps, Compliance, Zero Trust Architecture</p>
           </div>
         </div>
       </section>
 
       <section class="section personal">
         <div class="personal-content" data-aos="fade-up">
-          <h2 class="section-title">Personal Life</h2>
+          <div class="personal-header">
+            <img
+              src="./profile.jpeg"
+              alt="Jithin Sebastian"
+              class="profile-img"
+            />
+            <h2 class="section-title">Personal Life</h2>
+          </div>
           <p>Proud husband to Shilpa and father to Jordane.</p>
           <p>
             Balancing professional excellence with family values while
