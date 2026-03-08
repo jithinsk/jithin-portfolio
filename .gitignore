@@ -1,6 +1,8 @@
 # Private keys
 id_rsa
 id_rsa.pub
+deploy_key
+deploy_key.pub
 *.pem
 *.key
 
