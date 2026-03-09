@@ -24,651 +24,9 @@
     <meta name="twitter:title" content="Jithin Sebastian - Head of Engineering at Mozilor" />
     <meta name="twitter:description" content="9 years of engineering excellence. Scaled CookieYes to 1M+ users and built systems processing 3B+ daily requests." />
     <meta name="twitter:image" content="https://jithins.dev/profile.jpeg" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background: #0f0f0f;
-        color: #f5f5f5;
-        overflow-x: hidden;
-      }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-        width: 90%;
-      }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-      .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
-          center/cover no-repeat;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 1;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero-identity {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .hero-profile-img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #2193b0;
-        box-shadow: 0 0 20px rgba(33, 147, 176, 0.5);
-        flex-shrink: 0;
-      }
-
-      .hero .name {
-        font-size: 4.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 20px rgba(33, 147, 176, 0.5);
-      }
-
-      .section {
-        padding: 5rem 0;
-        position: relative;
-      }
-
-      .section::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 10%;
-        width: 80%;
-        height: 1px;
-        background: linear-gradient(
-          to right,
-          transparent,
-          #2193b0,
-          transparent
-        );
-      }
-
-      .skills-intro {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 2rem;
-        font-size: 1.2rem;
-        color: #e0e0e0;
-        line-height: 1.8;
-      }
-      
-      .skills {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .skill-card {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        transition: all 0.4s ease;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .skill-card::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-          45deg,
-          transparent,
-          rgba(33, 147, 176, 0.1),
-          transparent
-        );
-        transform: rotate(45deg);
-        transition: all 0.6s ease;
-      }
-
-      .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(33, 147, 176, 0.3);
-      }
-
-      .skill-card:hover::before {
-        transform: rotate(45deg) translate(50%, 50%);
-      }
-
-      .skill-card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1rem;
-        filter: drop-shadow(0 0 10px rgba(33, 147, 176, 0.5));
-      }
-
-      .personal {
-        text-align: center;
-        position: relative;
-        padding: 8rem 0;
-        background: radial-gradient(ellipse at center, rgba(33, 147, 176, 0.08) 0%, transparent 70%);
-        border-radius: 16px;
-        border: 1px solid rgba(33, 147, 176, 0.12);
-      }
-
-
-      .personal-content {
-        position: relative;
-        z-index: 2;
-      }
-      
-      .personal .section-title::after {
-        width: 100%;
-      }
-      
-      .personal-header {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 2rem;
-        margin-bottom: 2rem;
-      }
-      
-      .personal .profile-img {
-        margin-bottom: 0;
-        width: 120px;
-        height: 120px;
-      }
-
-      .roles {
-        font-size: 1.2rem;
-        color: #e0e0e0;
-        margin-top: 1rem;
-      }
-
-      .roles p {
-        margin: 0.5rem 0;
-        position: relative;
-        display: inline-block;
-      }
-
-      .roles p::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background: #2193b0;
-        transition: width 0.3s ease;
-      }
-
-      .roles p:hover::after {
-        width: 100%;
-      }
-
-      .primary-role-container {
-        margin-bottom: 1.5rem;
-      }
-
-      .primary-role {
-        font-size: 2.2rem;
-        font-weight: 700;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 20px rgba(33, 147, 176, 0.5);
-        margin: 0;
-        letter-spacing: 1px;
-      }
-
-      .role-divider {
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-        margin: 0.8rem auto 0;
-        border-radius: 2px;
-      }
-
-      .secondary-roles-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .secondary-role {
-        font-size: 1.1rem;
-        color: #e0e0e0;
-        opacity: 0.9;
-        font-weight: 400;
-        padding: 0.3rem 0.8rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-      }
-
-      .secondary-role:hover {
-        background: rgba(33, 147, 176, 0.1);
-        border-color: rgba(33, 147, 176, 0.3);
-        transform: translateY(-2px);
-      }
-
-      .role-separator {
-        color: #2193b0;
-        font-size: 1.2rem;
-        font-weight: bold;
-        opacity: 0.7;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      .floating {
-        animation: float 6s ease-in-out infinite;
-      }
-
-      .profile-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #2193b0;
-        box-shadow: 0 0 20px rgba(33, 147, 176, 0.5);
-        margin-bottom: 2rem;
-      }
-
-      .experience-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .experience-card {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        transition: all 0.4s ease;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .experience-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(33, 147, 176, 0.25);
-        border-color: rgba(33, 147, 176, 0.3);
-      }
-
-      .primary-card {
-        background: rgba(33, 147, 176, 0.1);
-        border: 2px solid rgba(33, 147, 176, 0.3);
-        box-shadow: 0 8px 30px rgba(33, 147, 176, 0.2);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .primary-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-      }
-
-      .primary-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px rgba(33, 147, 176, 0.3);
-      }
-
-      .experience-card img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-        margin-bottom: 1rem;
-      }
-      
-      .experience-highlights {
-        list-style: none;
-        padding: 0;
-        margin: 1.5rem 0 0;
-        text-align: left;
-      }
-      
-      .experience-highlights li {
-        position: relative;
-        padding-left: 1.8rem;
-        margin-bottom: 0.8rem;
-        color: #e0e0e0;
-      }
-      
-      .experience-highlights li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #2193b0;
-        font-weight: bold;
-      }
-
-      .scroll-down {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-        animation: bounce 2s infinite;
-      }
-
-      @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-          transform: translateY(0) translateX(-50%);
-        }
-        40% {
-          transform: translateY(-20px) translateX(-50%);
-        }
-        60% {
-          transform: translateY(-10px) translateX(-50%);
-        }
-      }
-
-      .section-title {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 2rem;
-      }
-
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background: #2193b0;
-      }
-      
-      /* Impact Section Styles */
-      .impact-section {
-        background: rgba(33, 147, 176, 0.05);
-        padding: 5rem 0;
-        margin-top: 0;
-        position: relative;
-        border-top: 1px solid rgba(33, 147, 176, 0.2);
-        border-bottom: 1px solid rgba(33, 147, 176, 0.2);
-      }
-      
-      .impact-intro {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 3rem;
-      }
-      
-      .impact-intro p {
-        font-size: 1.2rem;
-        color: #e0e0e0;
-        line-height: 1.8;
-      }
-      
-      .metrics-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-      
-      .metric-card {
-        background: rgba(15, 15, 15, 0.6);
-        padding: 2.5rem 2rem;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        transition: all 0.4s ease;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(33, 147, 176, 0.2);
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .metric-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-      }
-      
-      .metric-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 40px rgba(33, 147, 176, 0.3);
-      }
-      
-      .metric-number {
-        font-size: 3.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: white;
-        background: linear-gradient(to right, #2193b0, #6dd5ed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 1;
-      }
-      
-      .metric-label {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: #f5f5f5;
-      }
-      
-      .metric-description {
-        font-size: 1.1rem;
-        color: #e0e0e0;
-        line-height: 1.6;
-      }
-      
-      .metric-icon {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        color: #2193b0;
-        opacity: 0.8;
-      }
-
-      /* Mobile Responsive Styles */
-      @media (max-width: 768px) {
-        .container {
-          padding: 1rem;
-        }
-
-        .hero .name {
-          font-size: 3rem;
-        }
-
-        .hero-profile-img {
-          width: 70px;
-          height: 70px;
-        }
-
-        .hero-identity {
-          gap: 1rem;
-        }
-
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .roles p {
-          font-size: 1rem;
-          padding: 0 10px;
-        }
-
-        .primary-role {
-          font-size: 1.8rem;
-        }
-
-        .secondary-roles-container {
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-
-        .secondary-role {
-          font-size: 0.9rem;
-          padding: 0.2rem 0.6rem;
-        }
-
-        .role-separator {
-          display: none;
-        }
-
-        .section {
-          padding: 3rem 0;
-        }
-
-        .impact-section {
-          padding: 3rem 0;
-        }
-
-        .metrics-container {
-          grid-template-columns: 1fr;
-        }
-
-        .metric-number {
-          font-size: 3rem;
-        }
-
-        .metric-label {
-          font-size: 1.3rem;
-        }
-
-        .metric-description {
-          font-size: 1rem;
-        }
-
-        .experience-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .skills {
-          grid-template-columns: 1fr;
-        }
-
-        .personal {
-          padding: 4rem 0;
-        }
-        
-        .personal-header {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          gap: 1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero .name {
-          font-size: 2.5rem;
-        }
-
-        .roles p {
-          font-size: 0.9rem;
-          line-height: 1.4;
-        }
-
-        .primary-role {
-          font-size: 1.5rem;
-        }
-
-        .secondary-role {
-          font-size: 0.8rem;
-          padding: 0.2rem 0.5rem;
-        }
-
-        .role-divider {
-          width: 60px;
-        }
-
-        .profile-img {
-          width: 120px;
-          height: 120px;
-        }
-
-        .skill-card,
-        .experience-card {
-          padding: 1.5rem;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-        }
-      }
-    </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -686,219 +44,860 @@
       "url": "https://jithins.dev",
       "image": "https://jithins.dev/profile.jpeg",
       "jobTitle": "Head of Engineering",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Mozilor"
-      },
+      "worksFor": { "@type": "Organization", "name": "Mozilor" },
       "description": "Head of Engineering at Mozilor with 9 years of experience scaling systems to serve over 1 million users globally.",
       "knowsAbout": ["Software Engineering", "Information Security", "R&D", "Backend Systems", "Cloud Architecture", "AI/ML", "Big Data"]
     }
     </script>
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --accent:      #0ea5e9;
+        --accent-dim:  rgba(14,165,233,0.14);
+        --accent-glow: rgba(14,165,233,0.22);
+        --dark:        #0c0c0a;
+        --dark-surface:#161614;
+        --bg:          #f4f4f2;
+        --bg-card:     #ffffff;
+        --text:        #111111;
+        --text-muted:  #666666;
+        --border:      rgba(0,0,0,0.09);
+        --rule:        rgba(0,0,0,0.09);
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* ─── NAV ─────────────────────────────────────── */
+      .nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        padding: 1.35rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease;
+        border-bottom: 1px solid transparent;
+      }
+
+      /* Default: over dark hero → light text */
+      .nav-monogram {
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: rgba(255,255,255,0.9);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-monogram:hover { color: var(--accent); }
+
+      .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+      .nav-links a {
+        font-size: 0.82rem;
+        font-weight: 400;
+        color: rgba(255,255,255,0.55);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover { color: rgba(255,255,255,0.9); }
+
+      /* Scrolled: light background → dark text */
+      .nav.scrolled {
+        background: rgba(244,244,242,0.95);
+        backdrop-filter: blur(14px);
+        border-color: var(--border);
+      }
+      .nav.scrolled .nav-monogram { color: var(--text); }
+      .nav.scrolled .nav-links a  { color: var(--text-muted); }
+      .nav.scrolled .nav-links a:hover { color: var(--text); }
+
+      /* ─── HERO SECTION (dark) ──────────────────────── */
+      .hero-section {
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Dot-grid texture */
+      .hero-section::before {
+        content: "";
+        position: absolute; inset: 0;
+        background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+
+      /* Soft accent glow bottom-left */
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        bottom: -120px; left: -80px;
+        width: 500px; height: 500px;
+        background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 65%);
+        pointer-events: none;
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 7.5rem 2.5rem 5.5rem;
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        align-items: center;
+        gap: 5rem;
+      }
+
+      /* Live badge */
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        background: var(--accent-dim);
+        border: 1px solid var(--accent-glow);
+        color: var(--accent);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.32rem 0.85rem;
+        border-radius: 100px;
+        margin-bottom: 1.75rem;
+        width: fit-content;
+      }
+
+      .badge-dot {
+        width: 6px; height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        animation: badgePulse 2s ease-in-out infinite;
+        flex-shrink: 0;
+      }
+
+      @keyframes badgePulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.4; transform: scale(0.75); }
+      }
+
+      .hero-name {
+        font-size: clamp(4.2rem, 8.5vw, 8rem);
+        font-weight: 900;
+        line-height: 0.92;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        margin-bottom: 2rem;
+      }
+
+      .hero-name .dot { color: var(--accent); }
+
+      .hero-tagline {
+        font-size: 1.05rem;
+        font-weight: 400;
+        color: rgba(255,255,255,0.45);
+        line-height: 1.75;
+        max-width: 360px;
+        margin-bottom: 3rem;
+      }
+
+      .hero-scroll {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        color: rgba(255,255,255,0.35);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+        background: none;
+        border: none;
+        padding: 0;
+        font-family: inherit;
+      }
+      .hero-scroll:hover { color: rgba(255,255,255,0.7); }
+
+      .scroll-ring {
+        width: 34px; height: 34px;
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.85rem;
+        animation: ringBounce 2.4s ease-in-out infinite;
+      }
+      @keyframes ringBounce {
+        0%, 100% { transform: translateY(0); }
+        50%       { transform: translateY(5px); }
+      }
+
+      /* ─── PROFILE PHOTO (right column of hero) ─────── */
+      .hero-photo-col { position: relative; }
+
+      .hero-photo-frame {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-photo-frame img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        filter: grayscale(15%) contrast(1.02);
+        transition: filter 0.4s ease;
+      }
+
+      .hero-photo-frame:hover img { filter: grayscale(0%) contrast(1); }
+
+      /* Accent border on photo */
+      .hero-photo-frame::before {
+        content: "";
+        position: absolute; inset: 0;
+        border: 1.5px solid rgba(14,165,233,0.45);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      /* Subtle gradient fade at bottom of photo */
+      .hero-photo-frame::after {
+        content: "";
+        position: absolute; bottom: 0; left: 0; right: 0;
+        height: 35%;
+        background: linear-gradient(to top, rgba(12,12,10,0.6) 0%, transparent 100%);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      /* Mini stat strip below photo */
+      .hero-photo-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1px;
+        gap: 1px;
+        background: rgba(255,255,255,0.05);
+      }
+
+      .photo-stat {
+        background: var(--dark-surface);
+        padding: 0.9rem 1rem;
+      }
+
+      .photo-stat strong {
+        display: block;
+        color: var(--accent);
+        font-size: 1.15rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 0.2rem;
+      }
+
+      .photo-stat span {
+        color: rgba(255,255,255,0.35);
+        font-size: 0.65rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+      }
+
+      /* ─── SHARED LAYOUT ────────────────────────────── */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2.5rem;
+      }
+
+      .section-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3.5rem;
+      }
+
+      .section-eyebrow::before {
+        content: "";
+        width: 1.75rem; height: 1px;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+
+      /* ─── IMPACT (light bg) ────────────────────────── */
+      .impact-section {
+        padding: 8rem 0;
+        background: var(--bg);
+      }
+
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat-item {
+        padding: 2rem 3rem 2rem 0;
+        position: relative;
+      }
+
+      .stat-item + .stat-item {
+        padding-left: 3rem;
+        border-left: 1px solid var(--rule);
+      }
+
+      .stat-num {
+        font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .stat-num em {
+        color: var(--accent);
+        font-style: normal;
+      }
+
+      .stat-lbl {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.6rem;
+      }
+
+      .stat-desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        max-width: 210px;
+      }
+
+      /* ─── EXPERIENCE (white bg) ────────────────────── */
+      .exp-section {
+        padding: 8rem 0;
+        background: var(--bg-card);
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .exp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--rule);
+        margin-top: 0;
+        /* top border on grid done via border on section */
+        border: 1px solid var(--rule);
+      }
+
+      .exp-card {
+        background: var(--bg-card);
+        padding: 2.25rem 2.25rem 2.25rem 2.25rem;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.25s ease;
+        cursor: default;
+      }
+
+      .exp-card.primary {
+        grid-column: 1 / -1;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      /* Top accent stripe — animates in on hover */
+      .exp-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+      }
+
+      .exp-card:hover::before { transform: scaleX(1); }
+
+      .exp-card:hover { background: #fafafa; }
+
+      .exp-card-role {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.6rem;
+      }
+
+      .exp-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--text);
+        margin-bottom: 0.8rem;
+      }
+
+      .exp-card.primary .exp-card-title { font-size: 1.5rem; }
+
+      .exp-card-desc {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+      }
+
+      .exp-highlights {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .exp-highlights li {
+        font-size: 0.82rem;
+        color: #555;
+        padding-left: 1.1rem;
+        position: relative;
+        line-height: 1.55;
+      }
+
+      .exp-highlights li::before {
+        content: "↗";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 0.7rem;
+        top: 0.15em;
+      }
+
+      /* ─── SKILLS (light bg) ────────────────────────── */
+      .skills-section {
+        padding: 8rem 0;
+        background: var(--bg);
+      }
+
+      .skills-table { margin-top: 0; }
+
+      .skill-row {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 2rem;
+        padding: 1.35rem 0;
+        border-top: 1px solid var(--rule);
+        align-items: start;
+      }
+
+      .skill-row:last-child { border-bottom: 1px solid var(--rule); }
+
+      .skill-group {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text);
+        padding-top: 0.2rem;
+      }
+
+      .skill-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+
+      .skill-pill {
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 0.3rem 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        color: var(--text-muted);
+        background: transparent;
+        transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.18s;
+        cursor: default;
+        line-height: 1.5;
+      }
+
+      .skill-pill:hover {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      /* ─── PERSONAL (dark bg) ───────────────────────── */
+      .personal-section {
+        padding: 8rem 0;
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .personal-section::before {
+        content: "";
+        position: absolute; inset: 0;
+        background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+      }
+
+      .personal-section::after {
+        content: "";
+        position: absolute;
+        top: -100px; right: -80px;
+        width: 400px; height: 400px;
+        background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 65%);
+        pointer-events: none;
+      }
+
+      .personal-inner {
+        position: relative; z-index: 1;
+      }
+
+      .personal-section .section-eyebrow {
+        color: rgba(255,255,255,0.35);
+      }
+      .personal-section .section-eyebrow::before {
+        background: rgba(255,255,255,0.25);
+      }
+
+      .personal-headline {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        max-width: 600px;
+      }
+
+      .personal-headline em {
+        color: var(--accent);
+        font-style: normal;
+      }
+
+      .personal-sub {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.4);
+        max-width: 460px;
+        line-height: 1.8;
+      }
+
+      /* ─── SCROLL REVEAL ───────────────────────────── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-delay-1 { transition-delay: 0.1s; }
+      .reveal-delay-2 { transition-delay: 0.2s; }
+      .reveal-delay-3 { transition-delay: 0.3s; }
+      .reveal-delay-4 { transition-delay: 0.4s; }
+
+      /* ─── RESPONSIVE ──────────────────────────────── */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 3.5rem;
+          padding-bottom: 4rem;
+        }
+
+        .hero-photo-col { max-width: 280px; }
+
+        .exp-grid { grid-template-columns: 1fr; }
+        .exp-card.primary { grid-column: 1; border-bottom: none; }
+      }
+
+      @media (max-width: 768px) {
+        .stats-row { grid-template-columns: 1fr; gap: 0; }
+        .stat-item + .stat-item {
+          border-left: none;
+          padding-left: 0;
+          border-top: 1px solid var(--rule);
+          padding-top: 2rem;
+        }
+
+        .skill-row { grid-template-columns: 1fr; gap: 0.6rem; }
+      }
+
+      @media (max-width: 600px) {
+        .container { padding: 0 1.25rem; }
+        .nav { padding: 1rem 1.25rem; }
+        .nav-links { gap: 1.5rem; }
+        .hero { padding: 6.5rem 1.25rem 4rem; }
+        .impact-section, .exp-section, .skills-section, .personal-section { padding: 5rem 0; }
+        .hero-name { font-size: clamp(3.5rem, 13vw, 5rem); }
+      }
+
+      @media (max-width: 400px) {
+        .nav-links { display: none; }
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW5LBXZ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="hero">
-      <div class="hero-content">
-        <div class="container">
-          <div class="hero-identity">
-            <img src="./profile.jpeg" alt="Jithin Sebastian" class="hero-profile-img floating" />
-            <h1 class="name">Jithin Sebastian</h1>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a class="nav-monogram" href="#">Jithin Sebastian</a>
+      <ul class="nav-links">
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#personal">Personal</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero-section">
+      <div class="hero" aria-label="Hero">
+        <!-- Left column -->
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Currently at Mozilor
           </div>
-          <div class="roles" data-aos="fade-up">
-            <div class="primary-role-container">
-              <h2 class="primary-role">Head of Engineering at Mozilor</h2>
-              <div class="role-divider"></div>
-            </div>
-            <div class="secondary-roles-container">
-              <span class="secondary-role">Information Security Officer</span>
-              <span class="role-separator">•</span>
-              <span class="secondary-role">R&D Division Lead</span>
-            </div>
-          </div>
-          <p data-aos="fade-up" data-aos-delay="200">
-            9 Years of Engineering Excellence & Value Delivery
+
+          <h1 class="hero-name">Jithin<br>Sebastian<span class="dot">.</span></h1>
+
+          <p class="hero-tagline">
+            Engineering systems<br>
+            that scale to<br>
+            billions of requests.
           </p>
+
+          <button class="hero-scroll" id="scrollDown" aria-label="Scroll down">
+            <span class="scroll-ring">↓</span>
+            <span>Explore</span>
+          </button>
         </div>
-      </div>
-      <div class="scroll-down">
-        <span>Scroll Down</span>
-        <div>↓</div>
+
+        <!-- Right column — photo -->
+        <div class="hero-photo-col" aria-hidden="true">
+          <div class="hero-photo-frame">
+            <img src="./profile.jpeg" alt="Jithin Sebastian" loading="eager" />
+          </div>
+          <div class="hero-photo-stats">
+            <div class="photo-stat">
+              <strong>9</strong>
+              <span>Years</span>
+            </div>
+            <div class="photo-stat">
+              <strong>1M+</strong>
+              <span>Users Impacted</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <section class="impact-section">
+    <!-- IMPACT & ACHIEVEMENTS -->
+    <section class="impact-section" id="impact">
       <div class="container">
-        <div class="impact-intro" data-aos="fade-up">
-          <h2 class="section-title">Impact & Achievements</h2>
-          <p>Driving tangible business results through technical leadership and engineering excellence</p>
-        </div>
-        
-        <div class="metrics-container">
-          <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="metric-icon">👥</div>
-            <div class="metric-number">1M+</div>
-            <div class="metric-label">Users</div>
-            <p class="metric-description">Scaled CookieYes to serve over one million business users worldwide</p>
+        <div class="section-eyebrow reveal">Impact &amp; Achievements</div>
+
+        <div class="stats-row">
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-num">1<em>M+</em></div>
+            <div class="stat-lbl">Active Users</div>
+            <p class="stat-desc">Scaled CookieYes to serve over one million businesses worldwide</p>
           </div>
-          
-          <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="metric-icon">🔄</div>
-            <div class="metric-number">3B+</div>
-            <div class="metric-label">Daily Requests</div>
-            <p class="metric-description">Built high-performance pipelines processing over 3 billion requests daily</p>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-num">3<em>B+</em></div>
+            <div class="stat-lbl">Daily Requests</div>
+            <p class="stat-desc">High-performance pipelines built to handle planetary-scale traffic</p>
           </div>
-          
-          <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="metric-icon">🌐</div>
-            <div class="metric-number">Global</div>
-            <div class="metric-label">Scale</div>
-            <p class="metric-description">Engineered planet-scale scanning services for CookieYes</p>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-num">5<em>yr+</em></div>
+            <div class="stat-lbl">At Mozilor</div>
+            <p class="stat-desc">From engineer to Head of Engineering, R&amp;D Lead, and Security Officer</p>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container">
-      <section class="section" data-aos="fade-up">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="experience-grid">
-          <div class="experience-card primary-card" data-aos="fade-right">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png"
-              alt="Engineering Icon"
-            />
-            <h3>Head of Engineering at Mozilor</h3>
-            <p>
-              Leading engineering teams to build scalable products that serve millions of users globally. 
-              Architected systems processing billions of daily requests.
-            </p>
-            <ul class="experience-highlights">
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="exp-section" id="experience">
+      <div class="container">
+        <div class="section-eyebrow reveal">Professional Experience</div>
+
+        <div class="exp-grid">
+          <!-- Primary: Head of Engineering -->
+          <div class="exp-card primary reveal reveal-delay-1">
+            <div class="exp-card-role">Current · Mozilor</div>
+            <h3 class="exp-card-title">Head of Engineering</h3>
+            <p class="exp-card-desc">Leading engineering teams to build scalable products that serve millions of users globally. Architected systems processing billions of daily requests with high availability.</p>
+            <ul class="exp-highlights">
               <li>Scaled CookieYes from 100K to 1M+ active users</li>
-              <li>Built high-throughput data processing pipelines</li>
-              <li>Architected planet-scale scanning infrastructure</li>
+              <li>Built high-throughput data pipelines handling 3B+ requests/day</li>
+              <li>Architected planet-scale web scanning infrastructure</li>
             </ul>
           </div>
-          <div class="experience-card" data-aos="fade-up">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png"
-              alt="Security Icon"
-            />
-            <h3>Information Security Officer</h3>
-            <p>
-              Leading security initiatives and ensuring compliance across all
-              platforms at CookieYes, with focus on data protection and privacy.
-            </p>
-            <ul class="experience-highlights">
+
+          <!-- Info Security -->
+          <div class="exp-card reveal reveal-delay-2">
+            <div class="exp-card-role">Mozilor</div>
+            <h3 class="exp-card-title">Information Security Officer</h3>
+            <p class="exp-card-desc">Leading security initiatives and ensuring compliance across all platforms at CookieYes, with focus on data protection and privacy.</p>
+            <ul class="exp-highlights">
               <li>Implemented security-first development practices</li>
               <li>Achieved multiple compliance certifications</li>
               <li>Reduced security incident response time by 70%</li>
             </ul>
           </div>
-          <div class="experience-card" data-aos="fade-left">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png"
-              alt="R&D Icon"
-            />
-            <h3>R&D Division Lead</h3>
-            <p>
-              Driving innovation through research and development of cutting-edge 
-              technologies that power next-generation web solutions.
-            </p>
-            <ul class="experience-highlights">
-              <li>Developed proprietary scanning technology</li>
+
+          <!-- R&D -->
+          <div class="exp-card reveal reveal-delay-3">
+            <div class="exp-card-role">Mozilor</div>
+            <h3 class="exp-card-title">R&amp;D Division Lead</h3>
+            <p class="exp-card-desc">Driving innovation through research and development of cutting-edge technologies that power next-generation web solutions.</p>
+            <ul class="exp-highlights">
+              <li>Developed proprietary cookie scanning technology</li>
               <li>Pioneered AI integration in consent management</li>
               <li>Created performance optimization frameworks</li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2 class="section-title" data-aos="fade-right">Technical Expertise</h2>
-        <p class="skills-intro">
-          Leveraging cutting-edge technologies to solve complex business problems at scale
-        </p>
-        <div class="skills">
-          <div class="skill-card" data-aos="zoom-in">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png"
-              alt="Backend Icon"
-            />
-            <h3>Scalable Backend Systems</h3>
-            <p>Node.js, Go, Python, Microservices Architecture</p>
+    <!-- TECHNICAL EXPERTISE -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-eyebrow reveal">Technical Expertise</div>
+
+        <div class="skills-table">
+          <div class="skill-row reveal reveal-delay-1">
+            <span class="skill-group">Backend</span>
+            <div class="skill-pills">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Go</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Microservices</span>
+              <span class="skill-pill">REST</span>
+              <span class="skill-pill">GraphQL</span>
+            </div>
           </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png"
-              alt="Frontend Icon"
-            />
-            <h3>High-Performance Frontend</h3>
-            <p>React, Vue, Angular, Web Performance Optimization</p>
+          <div class="skill-row reveal reveal-delay-1">
+            <span class="skill-group">Frontend</span>
+            <div class="skill-pills">
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Vue</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Web Performance</span>
+              <span class="skill-pill">Angular</span>
+            </div>
           </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png"
-              alt="Data Icon"
-            />
-            <h3>Big Data Engineering</h3>
-            <p>High-throughput Processing, ETL Pipelines, Analytics</p>
+          <div class="skill-row reveal reveal-delay-2">
+            <span class="skill-group">Data</span>
+            <div class="skill-pills">
+              <span class="skill-pill">Kafka</span>
+              <span class="skill-pill">Elasticsearch</span>
+              <span class="skill-pill">ETL Pipelines</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Redis</span>
+            </div>
           </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png"
-              alt="AI Icon"
-            />
-            <h3>AI & ML Solutions</h3>
-            <p>ML Pipelines, GenAI Integration, Predictive Analytics</p>
+          <div class="skill-row reveal reveal-delay-2">
+            <span class="skill-group">Cloud</span>
+            <div class="skill-pills">
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">GCP</span>
+              <span class="skill-pill">Kubernetes</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Terraform</span>
+              <span class="skill-pill">CI/CD</span>
+            </div>
           </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png"
-              alt="Security Icon"
-            />
-            <h3>Enterprise Security</h3>
-            <p>SecDevOps, Compliance, Zero Trust Architecture</p>
+          <div class="skill-row reveal reveal-delay-3">
+            <span class="skill-group">Security</span>
+            <div class="skill-pills">
+              <span class="skill-pill">SecDevOps</span>
+              <span class="skill-pill">GDPR</span>
+              <span class="skill-pill">Zero Trust</span>
+              <span class="skill-pill">Compliance</span>
+              <span class="skill-pill">Privacy Engineering</span>
+            </div>
+          </div>
+          <div class="skill-row reveal reveal-delay-3">
+            <span class="skill-group">AI / ML</span>
+            <div class="skill-pills">
+              <span class="skill-pill">GenAI</span>
+              <span class="skill-pill">ML Pipelines</span>
+              <span class="skill-pill">Predictive Analytics</span>
+              <span class="skill-pill">LLM Integration</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section personal">
-        <div class="personal-content" data-aos="fade-up">
-          <div class="personal-header">
-            <img
-              src="./profile.jpeg"
-              alt="Jithin Sebastian"
-              class="profile-img"
-            />
-            <h2 class="section-title">Personal Life</h2>
-          </div>
-          <p>Proud husband to Shilpa and father to Jordane.</p>
-          <p>
-            Balancing professional excellence with family values while
-            continuously learning and growing in the tech landscape.
+    <!-- PERSONAL LIFE -->
+    <section class="personal-section" id="personal">
+      <div class="container">
+        <div class="personal-inner">
+          <div class="section-eyebrow reveal">Personal Life</div>
+
+          <p class="personal-headline reveal reveal-delay-1">
+            Proud husband to <em>Shilpa</em><br>
+            and father to <em>Jordane</em>.
+          </p>
+
+          <p class="personal-sub reveal reveal-delay-2">
+            Balancing professional excellence with family values while continuously learning and growing in the tech landscape.
           </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
+      // Nav: toggle .scrolled when below hero
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      }, { passive: true });
+
+      // Scroll button
+      document.getElementById('scrollDown').addEventListener('click', () => {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
       });
 
-      document
-        .querySelector(".scroll-down")
-        .addEventListener("click", function () {
-          window.scrollTo({
-            top: window.innerHeight,
-            behavior: "smooth",
-          });
+      // Scroll reveal
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
         });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
   </body>
 </html>
