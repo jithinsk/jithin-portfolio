@@ -10,7 +10,7 @@
 - Scaled CookieYes from 100,000 to more than 1 million users
 - Built data pipelines handling over 3 billion requests a day
 - Architected large-scale web scanning infrastructure for cookie scanning
-- Areas: backend systems (Node.js, Go, Python), data (Kafka, Elasticsearch, PostgreSQL, Redis), cloud (AWS, GCP, Kubernetes, Terraform), security and privacy engineering (GDPR), AI in consent management
+- Areas: backend systems (Node.js, Go, Python), data (data streaming, Elasticsearch, PostgreSQL, Redis), cloud (AWS, GCP, Kubernetes, Terraform), security and privacy engineering (GDPR), AI in consent management
 
 ## Pages
 
