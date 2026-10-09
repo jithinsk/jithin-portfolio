@@ -911,13 +911,28 @@
         color: rgba(255, 255, 255, 0.85);
       }
 
-      .contact-section .section-eyebrow { color: var(--amber); margin-bottom: 2rem; }
+      .contact-section { text-align: center; }
+
+      .contact-section .section-eyebrow {
+        color: var(--amber);
+        margin-bottom: 2rem;
+        justify-content: center;
+      }
+
+      .contact-section .section-eyebrow::after {
+        content: "";
+        width: 2rem; height: 1px;
+        background: var(--amber);
+        flex-shrink: 0;
+        opacity: 0.55;
+      }
 
       .contact-links {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem 2.5rem;
+        justify-content: center;
         margin-bottom: 4rem;
       }
 
