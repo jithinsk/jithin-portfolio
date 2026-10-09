@@ -17,6 +17,11 @@
 - Oversaw AI implementations: agency and affiliate verification pipelines, automated cookie classification, customer support assistant
 - Areas: backend systems (Node.js, Go, Python), data (data streaming, Elasticsearch, PostgreSQL, Redis), cloud (AWS, GCP, Kubernetes, Terraform), security and privacy engineering (GDPR), AI in consent management
 
+## Open source
+
+- [md-to-rich](https://md-to-rich.jithins.dev/): TypeScript library that converts Markdown to HTML, ANSI terminal output and a typed document tree for ProseMirror, Slate and Quill (MIT; GitHub: https://github.com/jithinsk/markdown-to-richtext; npm: md-to-rich)
+- [EmDash Header & Footer Code](https://emdash-code.jithins.dev/): EmDash plugin that adds analytics, verification tags, chat widgets and custom CSS/JS to pages without theme edits (MIT; GitHub: https://github.com/jithinsk/emdash-header-footer-code; npm: emdash-header-footer-code)
+
 ## Pages
 
 - [Profile](https://www.jithins.dev/): About, impact, experience, skills and contact

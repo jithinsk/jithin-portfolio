@@ -65,6 +65,28 @@
           "brand": { "@type": "Brand", "name": "CookieYes", "url": "https://www.cookieyes.com/" }
         },
         {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://md-to-rich.jithins.dev/#software",
+          "name": "md-to-rich",
+          "description": "TypeScript library that converts Markdown to HTML, ANSI terminal output, and a typed document tree for ProseMirror, Slate and Quill.",
+          "url": "https://md-to-rich.jithins.dev/",
+          "codeRepository": "https://github.com/jithinsk/markdown-to-richtext",
+          "programmingLanguage": "TypeScript",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": { "@id": "https://www.jithins.dev/#person" }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://emdash-code.jithins.dev/#software",
+          "name": "EmDash Header & Footer Code",
+          "description": "EmDash plugin that adds analytics, verification tags, chat widgets and custom CSS or JavaScript to page head or body without theme edits.",
+          "url": "https://emdash-code.jithins.dev/",
+          "codeRepository": "https://github.com/jithinsk/emdash-header-footer-code",
+          "programmingLanguage": "TypeScript",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": { "@id": "https://www.jithins.dev/#person" }
+        },
+        {
           "@type": "Person",
           "@id": "https://www.jithins.dev/#person",
           "name": "Jithin Sebastian",
@@ -720,6 +742,60 @@
         transform: translateY(-1px);
       }
 
+      /* ─── OPEN SOURCE ──────────────────────────────── */
+      .oss-section {
+        padding: 9rem 0;
+        background: var(--cream-card);
+        border-top: 1px solid var(--rule);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .oss-section::after {
+        content: "04";
+        position: absolute;
+        right: -0.02em;
+        top: -0.1em;
+        font-family: var(--font-display);
+        font-size: clamp(16rem, 28vw, 24rem);
+        font-weight: 900;
+        font-variation-settings: 'opsz' 144;
+        color: var(--text);
+        opacity: 0.032;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .oss-grid { position: relative; z-index: 1; }
+
+      .oss-meta {
+        overflow-wrap: anywhere;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+      }
+
+      .oss-links {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 1.5rem;
+      }
+
+      .oss-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--amber-text);
+        text-decoration: none;
+      }
+      .oss-links a:hover { color: var(--text); }
+
       /* ─── PERSONAL ─────────────────────────────────── */
       .personal-section {
         padding: 9rem 0;
@@ -737,7 +813,7 @@
       }
 
       .personal-section::after {
-        content: "04";
+        content: "05";
         position: absolute;
         right: -0.02em;
         top: -0.1em;
@@ -879,7 +955,7 @@
       .reveal-delay-4 { transition-delay: 0.4s; }
 
       /* ─── RESPONSIVE ───────────────────────────────── */
-      @media (max-width: 820px) {
+      @media (max-width: 1000px) {
         .nav-toggle { display: inline-flex; }
         .nav-links {
           display: none;
@@ -926,7 +1002,7 @@
         .container { padding: 0 1.25rem; }
         .nav { padding: 1rem 1.25rem; }
         .hero { padding: 6.5rem 1.25rem 4rem; }
-        .impact-section, .exp-section, .skills-section, .personal-section, .about-section, .faq-section { padding: 6rem 0; }
+        .impact-section, .exp-section, .skills-section, .oss-section, .personal-section, .about-section, .faq-section { padding: 6rem 0; }
         .hero-name { font-size: clamp(3.8rem, 14vw, 5.5rem); }
       }
     </style>
@@ -941,6 +1017,7 @@
         <li><a href="#impact">Impact</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#open-source">Open Source</a></li>
         <li><a href="#personal">Personal</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1162,6 +1239,39 @@
               <span class="skill-pill">Predictive Analytics</span>
               <span class="skill-pill">LLM Integration</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section class="oss-section" id="open-source">
+      <div class="container">
+        <h2 class="section-eyebrow reveal">Open Source</h2>
+
+        <div class="exp-grid oss-grid">
+          <div class="exp-card reveal reveal-delay-1">
+            <div class="exp-card-role">TypeScript library</div>
+            <h3 class="exp-card-title">md-to-rich</h3>
+            <p class="exp-card-desc">Converts Markdown to HTML, ANSI terminal output, and a typed document tree for rich-text editors like ProseMirror, Slate and Quill. Built on remark with GitHub Flavored Markdown support.</p>
+            <p class="oss-meta">MIT licence · <code>npm install md-to-rich</code></p>
+            <ul class="oss-links">
+              <li><a href="https://md-to-rich.jithins.dev/">Docs ↗</a></li>
+              <li><a href="https://github.com/jithinsk/markdown-to-richtext" rel="noopener" target="_blank">GitHub ↗</a></li>
+              <li><a href="https://www.npmjs.com/package/md-to-rich" rel="noopener" target="_blank">npm ↗</a></li>
+            </ul>
+          </div>
+
+          <div class="exp-card reveal reveal-delay-2">
+            <div class="exp-card-role">EmDash plugin</div>
+            <h3 class="exp-card-title">EmDash Header &amp; Footer Code</h3>
+            <p class="exp-card-desc">Adds analytics, verification tags, chat widgets and custom CSS or JavaScript to the head or body of EmDash pages, with no theme edits and no redeploys to change a snippet.</p>
+            <p class="oss-meta">MIT licence · <code>npm install emdash-header-footer-code</code></p>
+            <ul class="oss-links">
+              <li><a href="https://emdash-code.jithins.dev/">Docs ↗</a></li>
+              <li><a href="https://github.com/jithinsk/emdash-header-footer-code" rel="noopener" target="_blank">GitHub ↗</a></li>
+              <li><a href="https://www.npmjs.com/package/emdash-header-footer-code" rel="noopener" target="_blank">npm ↗</a></li>
+            </ul>
           </div>
         </div>
       </div>
