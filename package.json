@@ -4,7 +4,7 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf _site && mkdir _site && cp index.html 404.html robots.txt sitemap.xml llms.txt favicon.svg apple-touch-icon.png og-image.jpg profile.jpeg profile-400.webp profile-800.webp _site/ && cp -r fonts _site/"
   },
   "author": "jithin",
   "license": "ISC"

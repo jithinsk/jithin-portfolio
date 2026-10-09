@@ -16,3 +16,6 @@ deploy_key.pub
 # Dependencies
 node_modules/
 package-lock.json
+
+# Build output
+_site/
