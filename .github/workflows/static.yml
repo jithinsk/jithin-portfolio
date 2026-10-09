@@ -33,11 +33,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Assemble site
+        # Publish only the site files, never the whole repo root
+        run: |
+          mkdir _site
+          cp index.html 404.html robots.txt sitemap.xml llms.txt favicon.svg \
+             apple-touch-icon.png og-image.jpg profile.jpeg profile-400.webp profile-800.webp _site/
+          cp -r fonts _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

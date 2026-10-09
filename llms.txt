@@ -1,0 +1,22 @@
+# Jithin Sebastian
+
+> Jithin Sebastian is the Head of Engineering at Mozilor, the company behind the CookieYes consent management platform. He is also Mozilor's Information Security Officer and leads its R&D division.
+
+## Key facts
+
+- Role: Head of Engineering, Information Security Officer and R&D Division Lead at Mozilor (https://www.mozilor.com/)
+- Product: CookieYes (https://www.cookieyes.com/), a cookie consent management platform
+- Experience: 9 years in software engineering, more than 5 at Mozilor
+- Scaled CookieYes from 100,000 to more than 1 million users
+- Built data pipelines handling over 3 billion requests a day
+- Architected large-scale web scanning infrastructure for cookie scanning
+- Areas: backend systems (Node.js, Go, Python), data (Kafka, Elasticsearch, PostgreSQL, Redis), cloud (AWS, GCP, Kubernetes, Terraform), security and privacy engineering (GDPR), AI in consent management
+
+## Pages
+
+- [Profile](https://www.jithins.dev/): About, impact, experience, skills and contact
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/jithin-sebastian-40645b166)
+- [GitHub](https://github.com/jithinsk)

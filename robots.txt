@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jithins.dev/sitemap.xml
+Sitemap: https://www.jithins.dev/sitemap.xml
